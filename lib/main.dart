@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_market/src/pages/sign_in_screen.dart';
+import 'package:green_market/src/screens/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -2,7 +2,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:green_market/src/components/custom_text_field.dart';
 import 'package:green_market/src/config/custom_colors.dart';
-import 'package:green_market/src/pages/sign_up_screen.dart';
+import 'package:green_market/src/screens/base_screen.dart';
+import 'package:green_market/src/screens/sign_up_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -97,7 +98,13 @@ class SignInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (ctx) => const BaseScreen(),
+                            ),
+                          );
+                        },
                         child: const Text(
                           "Entrar",
                           style: TextStyle(
@@ -162,7 +169,7 @@ class SignInScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: ((context) => const SignUpScreen()),
+                              builder: ((context) => SignUpScreen()),
                             ),
                           );
                         },
