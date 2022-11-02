@@ -1,4 +1,6 @@
-import 'package:green_market/src/models/product.dart';
+import 'package:green_market/src/models/cart_product_model.dart';
+import 'package:green_market/src/models/product_model.dart';
+import 'package:green_market/src/models/user_model.dart';
 
 ProductModel apple = ProductModel(
   description:
@@ -70,3 +72,17 @@ List<String> categories = [
   "Carnes",
   "Cereais",
 ];
+
+List<CartProductModel> cartProducts = [
+  CartProductModel(product: apple, quantity: 2),
+  CartProductModel(product: grape, quantity: 3),
+  CartProductModel(product: papaya, quantity: 1),
+];
+
+UserModel user = UserModel(
+  name: 'Davi Theo Duarte',
+  email: 'davitheoduarte@tadex.com.br',
+  phone: '47981670022',
+  cpf: '106.366.210-90',
+  password: '',
+);
